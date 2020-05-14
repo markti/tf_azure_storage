@@ -22,7 +22,7 @@ module "secret_accesskey" {
   keyvault_id           = var.keyvault_id
   
   name                  = "${var.secret_prefix}-ConnectionString"
-  value                 = azurerm_eventgrid_topic.topic.endpoint
+  value                 = module.storage_account.primary_connection_string
 
   app_name              = var.app_name
   env_name              = var.env_name
