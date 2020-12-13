@@ -6,8 +6,6 @@ resource "azurerm_storage_account" "storage_account" {
   location                  = var.location
   account_tier              = var.tier
   account_replication_type  = var.type
-  allow_blob_public_access  = var.allow_blob_public_access
-  min_tls_version           = var.min_tls_version
 
   tags = {
     app = var.app_name
